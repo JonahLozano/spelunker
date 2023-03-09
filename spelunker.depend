@@ -1,0 +1,39 @@
+# depslib dependency file v1.0
+1675904537 source:c:\users\jonah\documents\github\spelunker\main.cpp
+	<windows.h>
+	<string.h>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+	<GL_Scene.h>
+
+1678322235 source:c:\users\jonah\documents\github\spelunker\src\commons.cpp
+	"commons.h"
+
+1678324437 source:c:\users\jonah\documents\github\spelunker\src\enms.cpp
+	"enms.h"
+
+1675729124 source:c:\users\jonah\documents\github\spelunker\src\gl_light.cpp
+	"GL_Light.h"
+
+1678324668 source:c:\users\jonah\documents\github\spelunker\src\gl_scene.cpp
+	"GL_Scene.h"
+	"GL_Light.h"
+	<player.h>
+	<enms.h>
+
+1678149772 source:c:\users\jonah\documents\github\spelunker\src\inputs.cpp
+	"Inputs.h"
+
+1677545907 source:c:\users\jonah\documents\github\spelunker\src\model.cpp
+	"Model.h"
+
+1677544015 source:c:\users\jonah\documents\github\spelunker\src\parallax.cpp
+	"parallax.h"
+
+1678324354 source:c:\users\jonah\documents\github\spelunker\src\player.cpp
+	"player.h"
+
+1676509467 source:c:\users\jonah\documents\github\spelunker\src\textureloader.cpp
+	"textureLoader.h"
+
