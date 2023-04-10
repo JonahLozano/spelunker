@@ -1,8 +1,7 @@
 #ifndef BLOCK_H
 #define BLOCK_H
-#include "commons.h"
-//#include "GL/gl.h"
-//#include "textureLoader.h"
+#include <GL/gl.h>
+#include "textureLoader.h"
 
 class Block
 {
@@ -10,15 +9,17 @@ class Block
         Block();
         virtual ~Block();
 
-        virtual void draw();
+        virtual void draw() const = 0;
 
-//        void drawBlock();
-//        void initBlock(GLuint,int,int);
-//        void blockTexture(char*);
-//        void placeBlock(float,float);
-//
-//        GLuint tex;
-//        textureLoader *tLoad = new textureLoader();
+        void drawBlock();
+        void initBlock(GLuint);
+        void blockTexture(char*);
+        void placeBlock(float,float,float);
+
+        GLuint tex;
+        textureLoader *tLoad = new textureLoader();
+
+        float x,y,scale;
 
     protected:
 

@@ -8,7 +8,7 @@
 #include <GL/gl.h>
 #include "Model.h"
 #include "Inputs.h"
-#include <parallax.h>
+#include "parallax.h"
 
 using namespace std;
 
@@ -25,6 +25,7 @@ class GL_Scene
 
         int screenWidth, screenHeight;
 
+        double zoom;
 
     protected:
 

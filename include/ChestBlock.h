@@ -8,6 +8,8 @@ class ChestBlock : public Block
         ChestBlock();
         virtual ~ChestBlock();
 
+        void draw() const override;
+
     protected:
 
     private:

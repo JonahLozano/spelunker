@@ -1,6 +1,6 @@
 #ifndef PARALLAX_H
 #define PARALLAX_H
-#include <textureLoader.h>
+#include "textureLoader.h"
 #include <time.h>
 
 class parallax

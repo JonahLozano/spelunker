@@ -3,7 +3,7 @@
 
 #include <windows.h>
 #include <GL/glut.h>
-#include <textureLoader.h>
+#include "textureLoader.h"
 
 class Model
 {

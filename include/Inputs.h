@@ -2,8 +2,11 @@
 #define INPUTS_H
 #include <windows.h>
 #include "Model.h"
-#include <parallax.h>
-#include <player.h>
+#include "parallax.h"
+#include "player.h"
+// #include "commons.h"
+#include "levelLoader.h"
+#include "GL_Scene.h"
 
 class Inputs
 {
@@ -12,7 +15,7 @@ class Inputs
         virtual ~Inputs();
 
         void keyPressed(Model *);
-        void keyPlayer(player *);
+        void keyPlayer(player *, sounds*);
         void keyUp();
 
         void mouseBtnDwn(Model *,double,double);
@@ -20,6 +23,7 @@ class Inputs
         void mouseWheel(Model *,double);
         void mouseMove(Model *,double,double);
         void keyEnv(parallax *,float);
+        void keyMap(levelLoader *,float,float);
 
         WPARAM wParam;
 

@@ -8,6 +8,8 @@ class CloudBlock : public Block
         CloudBlock();
         virtual ~CloudBlock();
 
+        void draw() const override;
+
     protected:
 
     private:

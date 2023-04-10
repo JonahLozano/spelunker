@@ -8,7 +8,7 @@ class AirBlock : public Block
         AirBlock();
         virtual ~AirBlock();
 
-        void draw() override;
+        void draw() const override;
 
     protected:
 

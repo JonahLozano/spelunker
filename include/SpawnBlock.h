@@ -8,6 +8,8 @@ class SpawnBlock : public Block
         SpawnBlock();
         virtual ~SpawnBlock();
 
+        void draw() const override;
+
     protected:
 
     private:

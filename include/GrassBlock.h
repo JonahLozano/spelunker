@@ -8,6 +8,8 @@ class GrassBlock : public Block
         GrassBlock();
         virtual ~GrassBlock();
 
+        void draw() const override;
+
     protected:
 
     private:

@@ -8,6 +8,8 @@ class FinishBlock : public Block
         FinishBlock();
         virtual ~FinishBlock();
 
+        void draw() const override;
+
     protected:
 
     private:

@@ -16,7 +16,7 @@
 #include <iostream>
 #include <windows.h>		// Header File For Windows
 
-#include <GL_Scene.h>
+#include "include/GL_Scene.h"
 
 using namespace std;
 

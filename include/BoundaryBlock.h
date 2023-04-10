@@ -8,6 +8,8 @@ class BoundaryBlock : public Block
         BoundaryBlock();
         virtual ~BoundaryBlock();
 
+        void draw() const override;
+
     protected:
 
     private:

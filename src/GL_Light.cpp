@@ -1,4 +1,4 @@
-#include "GL_Light.h"
+#include "../include/GL_Light.h"
 
 GL_Light::GL_Light(GLenum Light)
 {

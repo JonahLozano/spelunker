@@ -8,6 +8,8 @@ class EnemyBlock : public Block
         EnemyBlock();
         virtual ~EnemyBlock();
 
+        void draw() const override;
+
     protected:
 
     private:

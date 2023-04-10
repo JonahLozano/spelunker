@@ -1,8 +1,9 @@
 #ifndef ENMS_H
 #define ENMS_H
 #include <GL/gl.h>
-#include <textureLoader.h>
-#include <commons.h>
+#include "textureLoader.h"
+#include "commons.h"
+#include <time.h>
 
 
 class enms
@@ -13,11 +14,12 @@ class enms
 
         void drawEnemy();
         void placeEnemy(vec3);
-        void initEnemy(char*,int,int); // char* for filename; and ints, int for 2d frames
+        void initEnemy(GLuint,int,int); // char* for filename; and ints, int for 2d frames
+        void enemyTexture(char *);
 
-        enum acts{IDLE,WALKLEFT,WALKRIGHT,JUMP,ATTACK,DIE};
-
-        void actions(acts); //
+        enum acts{IDLE,WALKLEFT,WALKRIGHT,ROLLRIGHT,ROLLLEFT,JUMP,ATTACK,DIE};
+        void actions(); //
+        acts action;
 
         int hFrames; // horizontal frames
         int vFrames; // vertical frames
@@ -29,8 +31,15 @@ class enms
 
         vec3 eRota;
 
+        clock_t startTime;
+
         GLuint tex;
         textureLoader *tLoad = new textureLoader();
+        float theta, velocity, t; // t is time on projectiles
+
+        float scale;
+
+        void setScale(float);
 
     protected:
 

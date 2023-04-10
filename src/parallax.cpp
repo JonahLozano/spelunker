@@ -1,4 +1,4 @@
-#include "parallax.h"
+#include "../include/parallax.h"
 
 parallax::parallax()
 {
@@ -23,18 +23,20 @@ void parallax::drawSquare(float width, float height)
     glColor3f(1.0f,1.0f,1.0f);
     bTex->binder(tex);
 
+    float thing = -8.0f;
+
     glBegin(GL_POLYGON);
         glTexCoord2f(xMin,yMin);
-        glVertex3f(-1.0f*width/height, 1.0f, -8.0f);
+        glVertex3f(-1.0f*width/height, 1.0f, thing);
 
         glTexCoord2f(xMax,yMin);
-        glVertex3f(width/height, 1.0f, -8.0f);
+        glVertex3f(width/height, 1.0f, thing);
 
         glTexCoord2f(xMax,yMax);
-        glVertex3f(width/height, -1.0f, -8.0f);
+        glVertex3f(width/height, -1.0f, thing);
 
         glTexCoord2f(xMin,yMax);
-        glVertex3f(-1.0f*width/height, -1.0f, -8.0f);
+        glVertex3f(-1.0f*width/height, -1.0f, thing);
 
 
     glEnd();

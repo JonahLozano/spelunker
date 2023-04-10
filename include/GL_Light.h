@@ -1,7 +1,7 @@
 #ifndef GL_LIGHT_H
 #define GL_LIGHT_H
 
-#include <GL_Scene.h>
+#include "GL_Scene.h"
 
 #include <GL/gl.h>
 

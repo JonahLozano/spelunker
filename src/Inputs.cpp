@@ -1,4 +1,9 @@
-#include "Inputs.h"
+#include "../include/Inputs.h"
+#include "../include/sounds.h"
+
+//sounds *snds = new sounds();
+
+
 
 Inputs::Inputs()
 {
@@ -30,6 +35,27 @@ void Inputs::keyEnv(parallax* plx, float speed)
         plx->yMax += speed;
         plx->yMin += speed;
         break;
+    }
+}
+
+void Inputs::keyMap(levelLoader* lvl, float x, float y)
+{
+    switch(wParam){
+    case VK_LEFT:
+        lvl->spawnCols-=x;
+        break;
+    case VK_RIGHT:
+        lvl->spawnCols+=x;
+        break;
+
+//    case VK_DOWN:
+//        plx->yMax -= speed;
+//        plx->yMin -= speed;
+//        break;
+//    case VK_UP:
+//        plx->yMax += speed;
+//        plx->yMin += speed;
+//        break;
     }
 }
 
@@ -111,14 +137,14 @@ void Inputs::mouseMove(Model * mdl,double x, double y)
         prev_My = y;
     }
 }
-void Inputs::keyPlayer(player* ply)
+void Inputs::keyPlayer(player* ply,sounds* _snds)
 {
     switch(wParam){
     case VK_LEFT:
-        ply->actions(ply->WALKLEFT);
+        ply->actions(ply->WALKLEFT,_snds);
         break;
     case VK_RIGHT:
-        ply->actions(ply->WALKRIGHT);
+        ply->actions(ply->WALKRIGHT,_snds);
         break;
     case VK_DOWN:
         break;
@@ -127,3 +153,13 @@ void Inputs::keyPlayer(player* ply)
     }
 
 }
+
+//void Inputs::zoom(GL_Scene* scene, double zoomAmnt)
+//{
+//    scene->zoom += zoomAmnt;
+//}
+
+//void Inputs::zoom(GL_Scene* scene, double zoomAmnt)
+//{
+//    scene->zoom += zoomAmnt;
+//}

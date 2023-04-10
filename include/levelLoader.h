@@ -17,6 +17,15 @@ class levelLoader
         void loadCSV(const string&);
         void drawLevel();
 
+        void setScale(float);
+
+        float scale;
+
+        int rows,cols;
+
+        float spawnRows;
+        float spawnCols;
+
     protected:
 
     private:

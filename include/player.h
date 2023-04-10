@@ -1,8 +1,9 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 #include <GL/gl.h>
-#include <textureLoader.h>
-#include <commons.h>
+#include "textureLoader.h"
+#include "commons.h"
+#include "sounds.h"
 
 class player
 {
@@ -23,7 +24,7 @@ class player
 
         void drawPlayer();
         void playerInit(char *,int,int);
-        void actions(acts);
+        void actions(acts,sounds*);
 
         int hFrames; // horizontal frames
         int vFrames; // vertical frames
@@ -34,6 +35,9 @@ class player
 
         GLuint tex;
         textureLoader *tLoad = new textureLoader();
+
+        float scale;
+        void setScale(float);
 
     protected:
 
